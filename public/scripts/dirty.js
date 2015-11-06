@@ -10,17 +10,17 @@ initStorage();
     if (!store.enabled) {
       alert('Please enable local storage.');
       return;
-    } 
+    }
     else {
       //Make a storage state
-      store.set('state', 'open');
+      store.set('state', { status: 'open', saved: 'unsaved' });
 
-      var storageState = store.get('state');
-      if (storageState != 'open') {
+      var storage = store.get('state');
+      if (storage.status != 'open') {
         console.log('something went wrong - couldn\'t open storage');
-      } 
+      }
       else {
-        console.log('storage: ' + storageState);
+        console.log('storage: ' + storage.status);
       }
     }
     

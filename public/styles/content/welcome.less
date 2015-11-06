@@ -1,18 +1,51 @@
 // Welcome page
 
-#welcome {
+.bg {
   background:#651544;
+}
+
+#welcome {
+  position:relative;
+  width:100%;
+  height:100%;
   padding-top:5em;
   .transition(opacity 0.5s linear);
   * {cursor:default;}
-  h4 {margin-top:.6em;}
+  h4 {margin:.6em 0;}
   .text-left {padding:0 0 0 8em;}
   .text-right {padding:0 8.5em 0 0;}
-  h3 {
-    color:#bd3987;
-    margin-top:1.4em;
+  form {
+    background-color:rgba(255,255,255,.08);
+    padding:1em;
   }
-  
+  input[type=text], input[type=password] {
+    display:block;
+    position:relative;
+    width:100%;
+    padding:.5em;
+    font-size:2.3em;
+    font-weight:100;
+    background-color:rgba(255,255,255,.08);
+    color:#fcb8e0;
+    border:0;
+    outline:0;
+    cursor:text;
+    &:first-child {
+      margin-bottom:1px;
+    }
+    ::-webkit-input-placeholder {
+      color: #ae3f81;
+    }
+    :-moz-placeholder {
+       color: #ae3f81;  
+    }
+    ::-moz-placeholder {
+       color: #ae3f81;  
+    }
+    :-ms-input-placeholder {  
+       color: #ae3f81;  
+    }
+  }
   @media (max-width:800px) {
     .text-left {padding:0 1em 0 0;}
     .text-right {padding:0 0 0 3em;}
